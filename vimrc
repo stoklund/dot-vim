@@ -37,7 +37,7 @@ set laststatus=2
 " Display line and column.
 set ruler
 " Automaticaly save when switching buffers.
-set autowrite
+set autowriteall
 
 " Configure Solarized.
 let g:solarized_termcolors=256
