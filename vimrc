@@ -31,11 +31,17 @@ imap <C-K> <c-o>:pyf /usr/local/share/clang/clang-format.py<cr>
 set cinoptions=N-s
 " Default shiftwidth.
 set shiftwidth=4
+" Highlight col 99 for mozilla sources
+set colorcolumn=99
+" Wrap coments at 80
+set textwidth=80
 
 " Always display a status line.
 set laststatus=2
 " Display line and column.
 set ruler
+" Don't beep
+set novisualbell
 " Automaticaly save when switching buffers.
 set autowriteall
 
@@ -51,10 +57,9 @@ set guifont=Menlo:h13
 set guioptions-=r
 set guioptions-=L
 
+
 set smartcase
 set autowrite
 set expandtab
 " Don't let J and Q use double space after sentences.
 set nojoinspaces
-
-
