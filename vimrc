@@ -33,7 +33,7 @@ imap <C-K> <c-o>:pyf /usr/local/share/clang/clang-format.py<cr>
 " g C++ public/private indent.
 " h After public/private indent.
 " N Additional namespace indent. (Cancels ns indentation).
-set cinoptions=N-s,:0.5s,=0.5s,g0.5s,h0.5s
+set cinoptions=N-s,:0.5s,=0.5s,l1,g0.5s,h0.5s,(0
 " Default shiftwidth.
 set shiftwidth=4
 " Highlight col 99 for mozilla sources
