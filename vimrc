@@ -40,6 +40,9 @@ set shiftwidth=4
 set colorcolumn=99
 " Wrap coments at 80
 set textwidth=80
+" Ignore modelines in source files. Moz sources set tw=99 which then breaks
+" comment reflow.
+set nomodeline
 
 " Always display a status line.
 set laststatus=2
