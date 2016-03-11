@@ -72,3 +72,9 @@ set autowrite
 set expandtab
 " Don't let J and Q use double space after sentences.
 set nojoinspaces
+
+" Switch compilers.
+autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
+let g:rustfmt_autosave=1
+set errorformat+=\%f:%l:%c:\ %t%*[^:]:\ %m
+set errorformat+=\%f:%l:%c:\ %*\\d:%*\\d\ %t%*[^:]:\ %m
