@@ -8,7 +8,6 @@ call vundle#begin()
 " Let Vundle manage Vundle, required.
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rust-lang/rust.vim'
 
@@ -55,14 +54,14 @@ set novisualbell
 " Automaticaly save when switching buffers.
 set autowriteall
 
-" Configure Solarized.
-let g:solarized_termcolors=256
-let g:solarized_hitrail=1    "default value is 0
+" Syntax highlighting, colorscheme.
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme twilight
 
-set guifont=Menlo:h13
+" Configure GUI.
+set linespace=2
+set guifont=Menlo:h14
 " No scroll bars.
 set guioptions-=r
 set guioptions-=L
