@@ -18,6 +18,7 @@ filetype plugin indent on    " required
 
 syntax on
 let g:ycm_extra_conf_globlist = ['~/gecko-dev/*']
+let g:ycm_rust_src_path = '~/rust'
 
 " By default, Q enters Ex-mode which is annoying. Use it for reformatting.
 map Q gq
