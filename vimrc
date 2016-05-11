@@ -79,3 +79,16 @@ autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
 let g:rustfmt_autosave=1
 set errorformat+=\%f:%l:%c:\ %t%*[^:]:\ %m
 set errorformat+=\%f:%l:%c:\ %*\\d:%*\\d\ %t%*[^:]:\ %m
+
+" Hook up git grep to :G.
+func GitGrep(...)
+  let save = &grepprg
+  set grepprg=git\ grep\ -n\ $*
+  let s = 'grep'
+  for i in a:000
+    let s = s . ' ' . i
+  endfor
+  exe s
+  let &grepprg = save
+endfun
+command -nargs=? G call GitGrep(<f-args>)
