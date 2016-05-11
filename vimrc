@@ -31,14 +31,14 @@ imap <C-K> <c-o>:pyf /usr/local/share/clang/clang-format.py<cr>
 
 " Don't indent inside C++ namespaces.
 " : Indent case labels by half the shiftwidth.
-" = Indent statements after cases by half a shiftwidth reletive to the case.
+" = Indent statements after cases by half a shiftwidth relative to the case.
 " g C++ public/private indent.
 " h After public/private indent.
 " N Additional namespace indent. (Cancels ns indentation).
 set cinoptions=N-s,:0.5s,=0.5s,l1,g0.5s,h0.5s,(0
 " Default shiftwidth.
 set shiftwidth=4
-" Highlight col 99 for mozilla sources
+" Highlight col 99 for Mozilla sources.
 set colorcolumn=99
 " Wrap coments at 80
 set textwidth=80
