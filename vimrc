@@ -11,6 +11,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
+Plugin 'nvie/vim-flake8'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -19,9 +20,6 @@ filetype plugin indent on    " required
 syntax on
 let g:ycm_extra_conf_globlist = ['~/gecko-dev/*']
 let g:ycm_rust_src_path = '~/rust'
-
-" By default, Q enters Ex-mode which is annoying. Use it for reformatting.
-map Q gq
 
 map <C-]> :YcmCompleter GoTo<cr>
 
@@ -74,6 +72,9 @@ set expandtab
 " Don't let J and Q use double space after sentences.
 set nojoinspaces
 
+" By default, Q enters Ex-mode which is annoying. Use it for reformatting.
+map Q gq
+
 " Switch compilers.
 autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
 let g:rustfmt_autosave=1
@@ -92,3 +93,5 @@ func GitGrep(...)
   let &grepprg = save
 endfun
 command -nargs=? G call GitGrep(<f-args>)
+
+command Flake8 :call Flake8()
