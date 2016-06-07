@@ -74,6 +74,10 @@ set nojoinspaces
 
 " By default, Q enters Ex-mode which is annoying. Use it for reformatting.
 map Q gq
+set formatoptions-=2
+set formatoptions+=n
+set formatlistpat=^\\s*\\d\\+\\.\\s\\+\\\|^[-*+]\\s\\+
+set autoindent
 
 " Switch compilers.
 autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
