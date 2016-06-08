@@ -21,8 +21,6 @@ syntax on
 let g:ycm_extra_conf_globlist = ['~/gecko-dev/*']
 let g:ycm_rust_src_path = '~/rust'
 
-map <C-]> :YcmCompleter GoTo<cr>
-
 " Hook up clang-format to C-K.
 map <C-K> :pyf /usr/local/share/clang/clang-format.py<cr>
 imap <C-K> <c-o>:pyf /usr/local/share/clang/clang-format.py<cr>
