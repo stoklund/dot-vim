@@ -12,6 +12,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
 Plugin 'nvie/vim-flake8'
+Plugin 'raichoo/smt-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
