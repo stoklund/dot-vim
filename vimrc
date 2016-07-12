@@ -20,7 +20,7 @@ filetype plugin indent on    " required
 
 syntax on
 let g:ycm_extra_conf_globlist = ['~/gecko-dev/*']
-let g:ycm_rust_src_path = '~/rust'
+let g:ycm_rust_src_path = '~/rust/src'
 
 " Hook up clang-format to C-K.
 map <C-K> :pyf /usr/local/share/clang/clang-format.py<cr>
