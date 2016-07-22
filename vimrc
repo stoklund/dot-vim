@@ -78,9 +78,10 @@ set formatoptions+=n
 set formatlistpat=^\\s*\\d\\+\\.\\s\\+\\\|^[-*+]\\s\\+
 set autoindent
 
-" Switch compilers.
+" Switch compilers for Rust code.
 autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
 let g:rustfmt_autosave=1
+let g:rustfmt_fail_silently=1
 set errorformat+=\%f:%l:%c:\ %t%*[^:]:\ %m
 set errorformat+=\%f:%l:%c:\ %*\\d:%*\\d\ %t%*[^:]:\ %m
 
