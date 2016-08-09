@@ -8,7 +8,6 @@ call vundle#begin()
 " Let Vundle manage Vundle, required.
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
 Plugin 'nvie/vim-flake8'
@@ -47,8 +46,8 @@ set nomodeline
 set laststatus=2
 " Display line and column.
 set ruler
-" Don't beep
-set novisualbell
+" Don't beep.
+set visualbell
 " Automaticaly save when switching buffers.
 set autowriteall
 
