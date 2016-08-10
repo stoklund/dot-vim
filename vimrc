@@ -9,6 +9,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'rust-lang/rust.vim'
+Plugin 'racer-rust/vim-racer'
 Plugin 'cespare/vim-toml'
 Plugin 'nvie/vim-flake8'
 Plugin 'raichoo/smt-vim'
@@ -18,8 +19,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax on
-let g:ycm_extra_conf_globlist = ['~/gecko-dev/*']
-let g:ycm_rust_src_path = '~/rust/src'
+set hidden
 
 " Hook up clang-format to C-K.
 map <C-K> :pyf /usr/local/share/clang/clang-format.py<cr>
@@ -83,6 +83,7 @@ let g:rustfmt_autosave=1
 let g:rustfmt_fail_silently=1
 set errorformat+=\%f:%l:%c:\ %t%*[^:]:\ %m
 set errorformat+=\%f:%l:%c:\ %*\\d:%*\\d\ %t%*[^:]:\ %m
+let $RUST_SRC_PATH = $HOME . '/rust/src'
 
 " Hook up git grep to :G.
 func GitGrep(...)
