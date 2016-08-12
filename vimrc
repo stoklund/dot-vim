@@ -36,8 +36,8 @@ set cinoptions=N-s,:0.5s,=0.5s,l1,g0.5s,h0.5s,(0
 set shiftwidth=4
 " Highlight col 99 for Mozilla sources.
 set colorcolumn=99
-" Wrap coments at 80
-set textwidth=80
+" Wrap coments at 79
+set textwidth=79
 " Ignore modelines in source files. Moz sources set tw=99 which then breaks
 " comment reflow.
 set nomodeline
@@ -79,7 +79,7 @@ set autoindent
 
 " Switch compilers for Rust code.
 autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
-let g:rustfmt_autosave=1
+"let g:rustfmt_autosave=1
 let g:rustfmt_fail_silently=1
 set errorformat+=\%f:%l:%c:\ %t%*[^:]:\ %m
 set errorformat+=\%f:%l:%c:\ %*\\d:%*\\d\ %t%*[^:]:\ %m
