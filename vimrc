@@ -8,6 +8,7 @@ call vundle#begin()
 " Let Vundle manage Vundle, required.
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'scrooloose/syntastic'
 Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
 Plugin 'cespare/vim-toml'
@@ -46,6 +47,7 @@ set nomodeline
 set laststatus=2
 " Display line and column.
 set ruler
+set statusline=%n\ %f%M%R%=%y%15(L%l,%c%V%)/%L
 " Don't beep.
 set visualbell
 " Automaticaly save when switching buffers.
@@ -84,6 +86,15 @@ let g:rustfmt_fail_silently=1
 set errorformat+=\%f:%l:%c:\ %t%*[^:]:\ %m
 set errorformat+=\%f:%l:%c:\ %*\\d:%*\\d\ %t%*[^:]:\ %m
 let $RUST_SRC_PATH = $HOME . '/rust/src'
+
+" Syntastic.
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Hook up git grep to :G.
 func GitGrep(...)
