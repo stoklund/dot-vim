@@ -96,6 +96,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_pylint_args = "--py3k"
+let g:syntastic_rst_checkers = []
 
 " Hook up git grep to :G.
 func GitGrep(...)
