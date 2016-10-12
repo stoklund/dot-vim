@@ -85,7 +85,7 @@ autocmd BufRead,BufNewFile Cargo.toml,Cargo.lock,*.rs compiler cargo
 let g:rustfmt_fail_silently=1
 set errorformat+=\%f:%l:%c:\ %t%*[^:]:\ %m
 set errorformat+=\%f:%l:%c:\ %*\\d:%*\\d\ %t%*[^:]:\ %m
-let $RUST_SRC_PATH = $HOME . '/rust/src'
+let $RUST_SRC_PATH = $HOME . '/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src'
 
 " Syntastic.
 set statusline+=%#warningmsg#
