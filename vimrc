@@ -74,8 +74,14 @@ set nojoinspaces
 
 " By default, Q enters Ex-mode which is annoying. Use it for reformatting.
 map Q gq
+" Don't indent to second line.
 set formatoptions-=2
+" Don't wrap lines that were already too long.
+set formatoptions+=l
+" Recognize number lists.
 set formatoptions+=n
+" Remove comment leader when joining lines.
+set formatoptions+=j
 set formatlistpat=^\\s*\\d\\+\\.\\s\\+\\\|^[-*+]\\s\\+
 set autoindent
 
