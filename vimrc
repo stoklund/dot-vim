@@ -117,4 +117,6 @@ func GitGrep(...)
 endfun
 command -nargs=? G call GitGrep(<f-args>)
 
-command Flake8 :call Flake8()
+" Set up spell checking.
+set spellcapcheck=[.?][\ \t]\+
+set spell
