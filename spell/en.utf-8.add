@@ -48,3 +48,15 @@ defs
 Unencoded
 vtable
 domtree
+ABI
+MSB
+asm
+js
+instgroup
+OperandKind
+InstructionData
+InstructionFormat
+ValueList
+Aarch64
+ARM's
+A32
