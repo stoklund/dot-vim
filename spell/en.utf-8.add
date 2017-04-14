@@ -60,3 +60,7 @@ ValueList
 Aarch64
 ARM's
 A32
+subnormals
+MSA
+Ecma
+TC39
