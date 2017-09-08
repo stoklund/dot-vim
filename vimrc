@@ -122,3 +122,6 @@ command -nargs=? G call GitGrep(<f-args>)
 " Set up spell checking.
 set spellcapcheck=[.?][\ \t]\+
 set spell
+
+" The trailing semicolon makes the tag search go up the hierarchy.
+set tags=./tags,tags;
