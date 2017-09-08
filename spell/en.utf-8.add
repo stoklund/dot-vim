@@ -66,3 +66,9 @@ Ecma
 TC39
 InstructionData
 ABIs
+noqa
+unaliased
+BranchInfo
+XFormGroup
+CPUMode
+immediates
