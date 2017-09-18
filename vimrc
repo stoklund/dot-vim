@@ -103,8 +103,12 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_python_exec = "/usr/local/bin/python3"
 let g:syntastic_python_pylint_args = "--py3k"
-let g:syntastic_python_checkers = ['flake8', 'mypy']
+let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_rst_checkers = []
+
+" Syntastic C++ code is currently gecko.
+let g:syntastic_cpp_include_dirs = [ $HOME . '/gecko-dev/obj-x64dev/dist/include', $HOME . '/gecko-dev/obj-x64dev/js/src' ]
+let g:syntastic_cpp_compiler_options = '-std=gnu++11 -DDEBUG=1 -DJS_CODEGEN_X64 -Wno-invalid-offsetof'
 
 " Hook up git grep to :G.
 func GitGrep(...)
