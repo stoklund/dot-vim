@@ -73,3 +73,8 @@ XFormGroup
 CPUMode
 immediates
 SpiderMonkey's
+ARMv7
+VFP
+AVX
+ARMv8
+regalloc
